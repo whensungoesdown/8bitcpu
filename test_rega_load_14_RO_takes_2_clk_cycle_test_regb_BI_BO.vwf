@@ -272,6 +272,16 @@ SIGNAL("AO")
 	PARENT = "";
 }
 
+GROUP("bus_group")
+{
+	MEMBERS = "bus_probe0", "bus_probe1", "bus_probe2", "bus_probe3", "bus_probe4", "bus_probe5", "bus_probe6", "bus_probe7";
+}
+
+GROUP("test_group")
+{
+	MEMBERS = "test0", "test1", "test2", "test3";
+}
+
 SIGNAL("BI")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
@@ -290,16 +300,6 @@ SIGNAL("BO")
 	LSB_INDEX = -1;
 	DIRECTION = INPUT;
 	PARENT = "";
-}
-
-GROUP("bus_group")
-{
-	MEMBERS = "bus_probe0", "bus_probe1", "bus_probe2", "bus_probe3", "bus_probe4", "bus_probe5", "bus_probe6", "bus_probe7";
-}
-
-GROUP("test_group")
-{
-	MEMBERS = "test0", "test1", "test2", "test3";
 }
 
 TRANSITION_LIST("bus_probe0")
@@ -528,7 +528,9 @@ TRANSITION_LIST("AI")
 		REPEAT = 1;
 		LEVEL 0 FOR 300.0;
 		LEVEL 1 FOR 50.0;
-		LEVEL 0 FOR 650.0;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 530.0;
 	}
 }
 
@@ -537,7 +539,9 @@ TRANSITION_LIST("AO")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 350.0;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 590.0;
 	}
 }
 
@@ -546,7 +550,9 @@ TRANSITION_LIST("BI")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 350.0;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 590.0;
 	}
 }
 
@@ -555,7 +561,9 @@ TRANSITION_LIST("BO")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 410.0;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 530.0;
 	}
 }
 
