@@ -23,7 +23,7 @@ BEGIN
 0B	: F0;
 0C	: F0;
 0D	: F0;
-0E	: AA;
-0F	: 01;
+0E	: FA;
+0F	: 10;
 
 END;
