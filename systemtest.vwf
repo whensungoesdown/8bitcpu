@@ -182,16 +182,6 @@ SIGNAL("CLR")
 	PARENT = "";
 }
 
-GROUP("test_group")
-{
-	MEMBERS = "test1", "test0", "test2", "test3";
-}
-
-GROUP("bus_probe_group")
-{
-	MEMBERS = "bus_probe0", "bus_probe1", "bus_probe2", "bus_probe3", "bus_probe4", "bus_probe5", "bus_probe6", "bus_probe7";
-}
-
 SIGNAL("out0")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
@@ -272,9 +262,39 @@ SIGNAL("out7")
 	PARENT = "";
 }
 
+GROUP("test_group")
+{
+	MEMBERS = "test1", "test0", "test2", "test3";
+}
+
+GROUP("bus_probe_group")
+{
+	MEMBERS = "bus_probe0", "bus_probe1", "bus_probe2", "bus_probe3", "bus_probe4", "bus_probe5", "bus_probe6", "bus_probe7";
+}
+
 GROUP("out_group")
 {
 	MEMBERS = "out0", "out1", "out2", "out3", "out4", "out5", "out6", "out7";
+}
+
+SIGNAL("output_DRS")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("output_DE")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
 }
 
 TRANSITION_LIST("test1")
@@ -481,6 +501,24 @@ TRANSITION_LIST("out6")
 }
 
 TRANSITION_LIST("out7")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("output_DRS")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("output_DE")
 {
 	NODE
 	{
@@ -744,6 +782,24 @@ DISPLAY_LINE
 	TREE_INDEX = 25;
 	TREE_LEVEL = 1;
 	PARENT = 17;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "output_DRS";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 26;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "output_DE";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 27;
+	TREE_LEVEL = 0;
 }
 
 TIME_BAR
