@@ -638,7 +638,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 1728 1552 1904 1568)
+	(rect 1728 1536 1904 1552)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "output_DRS" (rect 90 0 150 12)(font "Arial" ))
 	(pt 0 8)
@@ -651,7 +651,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 1904 1568 1960 1584))
+	(annotation_block (location)(rect 1904 1552 1960 1568))
 )
 (pin
 	(output)
@@ -3066,6 +3066,54 @@ applicable agreement for further details.
 		(line (pt 14 25)(pt 32 16))
 	)
 )
+(symbol
+	(rect 1624 1528 1672 1560)
+	(text "ALT_OUTBUF" (rect 1 0 61 10)(font "Arial" (font_size 6)))
+	(text "inst35" (rect 3 21 32 33)(font "Arial" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "i" (rect 2 7 7 19)(font "Courier New" (bold))(invisible))
+		(text "i" (rect 2 7 7 19)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 14 16))
+	)
+	(port
+		(pt 48 16)
+		(output)
+		(text "o" (rect 32 7 37 19)(font "Courier New" (bold))(invisible))
+		(text "o" (rect 32 7 37 19)(font "Courier New" (bold))(invisible))
+		(line (pt 32 16)(pt 48 16))
+	)
+	(drawing
+		(line (pt 14 25)(pt 14 7))
+		(line (pt 14 7)(pt 32 16))
+		(line (pt 14 25)(pt 32 16))
+	)
+)
+(symbol
+	(rect -376 112 -328 144)
+	(text "ALT_INBUF" (rect 1 0 50 10)(font "Arial" (font_size 6)))
+	(text "inst24" (rect 3 21 32 33)(font "Arial" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "i" (rect 2 7 7 19)(font "Courier New" (bold))(invisible))
+		(text "i" (rect 2 7 7 19)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 14 16))
+	)
+	(port
+		(pt 48 16)
+		(output)
+		(text "o" (rect 32 7 37 19)(font "Courier New" (bold))(invisible))
+		(text "o" (rect 32 7 37 19)(font "Courier New" (bold))(invisible))
+		(line (pt 32 16)(pt 48 16))
+	)
+	(drawing
+		(line (pt 14 25)(pt 14 7))
+		(line (pt 14 7)(pt 32 16))
+		(line (pt 14 25)(pt 32 16))
+	)
+)
 (connector
 	(pt 264 280)
 	(pt 264 248)
@@ -5259,10 +5307,6 @@ applicable agreement for further details.
 	(pt -368 80)
 )
 (connector
-	(pt 112 128)
-	(pt 136 128)
-)
-(connector
 	(pt -328 224)
 	(pt -152 224)
 )
@@ -5285,10 +5329,6 @@ applicable agreement for further details.
 (connector
 	(pt -184 80)
 	(pt 136 80)
-)
-(connector
-	(pt -448 128)
-	(pt 112 128)
 )
 (connector
 	(pt -440 488)
@@ -5632,10 +5672,6 @@ applicable agreement for further details.
 	(pt 384 1560)
 )
 (connector
-	(pt 384 1560)
-	(pt 1728 1560)
-)
-(connector
 	(pt 368 1528)
 	(pt 368 1576)
 )
@@ -5846,6 +5882,34 @@ applicable agreement for further details.
 (connector
 	(pt -248 264)
 	(pt 144 264)
+)
+(connector
+	(pt 384 1560)
+	(pt 1592 1560)
+)
+(connector
+	(pt 1592 1560)
+	(pt 1592 1544)
+)
+(connector
+	(pt 1592 1544)
+	(pt 1624 1544)
+)
+(connector
+	(pt 1672 1544)
+	(pt 1728 1544)
+)
+(connector
+	(pt -448 128)
+	(pt -376 128)
+)
+(connector
+	(pt 112 128)
+	(pt 136 128)
+)
+(connector
+	(pt -328 128)
+	(pt 112 128)
 )
 (junction (pt 608 272))
 (junction (pt 608 264))
