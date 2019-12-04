@@ -72,22 +72,27 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE test_lda_14_add_15.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE test_lda_14_add_15__then_mov_rega_regb.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE systemtest.vwf
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
-set_location_assignment PIN_44 -to out4
-set_location_assignment PIN_45 -to out5
-set_location_assignment PIN_47 -to out6
-set_location_assignment PIN_48 -to out7
+set_location_assignment PIN_51 -to out4
+set_location_assignment PIN_52 -to out5
+set_location_assignment PIN_53 -to out6
+set_location_assignment PIN_55 -to out7
 set_location_assignment PIN_17 -to CLK
 set_location_assignment PIN_60 -to CLR
 set_location_assignment PIN_40 -to out0
 set_location_assignment PIN_41 -to out1
 set_location_assignment PIN_42 -to out2
 set_location_assignment PIN_43 -to out3
-set_location_assignment PIN_125 -to CY
-set_location_assignment PIN_115 -to output_DE
-set_location_assignment PIN_114 -to output_DRS
+set_location_assignment PIN_57 -to output_DE
 set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/test_display_cfg.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE test_displaycfg.vwf
 set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
 set_global_assignment -name VECTOR_WAVEFORM_FILE systemtest_all_signal.vwf
+set_global_assignment -name VHDL_FILE clk_div50.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE test_clkdivider.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE temp.vwf
+set_global_assignment -name CDF_FILE output_files/Chain3.cdf
+set_global_assignment -name CDF_FILE output_files/Chain4.cdf
+set_global_assignment -name CDF_FILE output_files/Chain5.cdf
+set_location_assignment PIN_58 -to output_DRS
 set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "D:/fpgaprjs/testcpu3/systemtest.vwf"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
